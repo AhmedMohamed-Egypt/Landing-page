@@ -41,19 +41,7 @@ const swiperEducation = new Swiper(".education-sliding  .swiper", {
   */
 });
 //format Number
-const formatNumber = () => {
-  const allNumbers = document.querySelectorAll(".cardItem-numbers__number");
-  allNumbers.forEach((item) => {
-    if (item) {
-      const indexItem = item.textContent.indexOf("x");
-      const number = Number(item.textContent.slice(0, indexItem));
-      console.log(number);
 
-      item.innerHTML = number.toLocaleString("en-US");
-    }
-  });
-};
-formatNumber();
 animateDisplay = function (target, animationClass, displayType, timeout) {
   // timeout should be longer than css transition
   var doneTimedDisplay = false,
@@ -121,4 +109,17 @@ if(event.ctrlKey===true){
 })
 
 */
+
+function formatNumbers(){
+  const allNums = document.querySelectorAll('.formatNum')
+
+  allNums.forEach((item)=>{
+    const x = +item.textContent
+    console.log(x)
+    item.textContent = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  })
+}
+formatNumbers()
+
+
 

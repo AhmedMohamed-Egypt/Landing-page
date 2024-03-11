@@ -29,7 +29,11 @@
   src: url("../fonts/Nunito-SemiBold.ttf");
 }
 
-//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf
+@font-face {
+  font-family: 'Nunito-MediumItalic';
+  src: url("../fonts/Nunito-MediumItalic.ttf");
+}
+//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf Nunito-MediumItalic.ttf
 
 .nuntio-med{
   font-family: 'Nunito-med';
@@ -42,6 +46,12 @@
 }
 .nunito-semi-bold{
   font-family: 'Nunito-SemiBold';
+}
+.nuntio-med-italic{
+  font-family: 'Nunito-MediumItalic';
+}
+.weight-normal{
+  font-weight: normal;
 }
 
 .lightLtrSpacing{
