@@ -3,7 +3,7 @@ mixin card()
  div(class="card-how-it-work d-flex align-items-center justify-content-between")
   each val,index in data 
     div.card-how
-     h2(class="drkBlue size-20 nuntio-med text-center")= `step${index+1}`
+     h2(class="drkBlue size-20 nuntio-med text-center capitilize pdtop-10 pdb-10")= `step${index+1}`
      .cardbkground
       p(class="text-center white size-38 nunito-bold-ex cardbkground__title")= val.title 
       .subcontainer
