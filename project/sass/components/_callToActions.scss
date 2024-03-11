@@ -1,0 +1,12 @@
+.join-get-btn{
+    background-color: $yellow;
+    color: $drkBlue;
+    border-radius: 7px;
+    display: inline-block;
+    &.join{
+        padding: 2px 55px;
+    }
+    &.get{
+        padding: 4px 50px;
+    }
+}
