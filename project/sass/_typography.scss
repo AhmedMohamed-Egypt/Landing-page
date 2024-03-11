@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/*loop font size*/
+@for $i from 1 through 60{
+  .size-#{$i}{
+    font-size: $i+px;
+  }
+}
+@for $i from 1 through 10{
+  .weight-#{$i*100}{
+    font-weight: #{$i*100};
+  }
+}
+
+@font-face {
+  font-family: 'Nunito-med';
+  src: url("../fonts/Nunito-Medium.ttf");
+}
+@font-face {
+  font-family: 'Nunito-Bold';
+  src: url("../fonts/Nunito-Bold.ttf");
+}
+@font-face {
+  font-family: 'Nunito-ExtraBold';
+  src: url("../fonts/Nunito-ExtraBold.ttf");
+}
+@font-face {
+  font-family: 'Nunito-SemiBold';
+  src: url("../fonts/Nunito-SemiBold.ttf");
+}
+
+//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf
+
+.nuntio-med{
+  font-family: 'Nunito-med';
+}
+.nunito-bold{
+  font-family: 'Nunito-Bold';
+}
+.nunito-bold-ex{
+  font-family: 'Nunito-ExtraBold';
+}
+.nunito-semi-bold{
+  font-family: 'Nunito-SemiBold';
+}
+
+.lightLtrSpacing{
+  letter-spacing: .25px;
+}
+
+.ltrspacing{
+  letter-spacing: 1.5px;
+}
+.ltrspacingNav{
+  letter-spacing: .85px;
+}
+.ltrspac-2{
+  letter-spacing: 2px;
+}
+.ltrspac-3{
+  letter-spacing: 3px;
+}
+
+.txtLHeight{
+  line-height: 1.6;
+}
+/*h2 heading Title */
+
+
