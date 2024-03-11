@@ -1,0 +1,31 @@
+$colors: ($secndryPink, $scondryYellow, $lightBlue);
+
+@for $i from 1 through length($colors){
+    .card-how{
+        $color: nth($colors, $i);
+        border-radius: 7px;
+        width: 30%;
+        
+        &:nth-child(#{$i}){
+            border: 1px solid $color;
+            >h2{
+                background-color: $color;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+
+            }
+            .cardbkground{
+                &__title{
+                    text-shadow: 0px 1px 17px $thrdPink;
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                }
+                .sublist-how-it-work{
+                   &__list{
+                    
+                   }
+                }
+            }
+        }
+    }
+}

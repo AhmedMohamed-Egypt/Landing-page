@@ -1,0 +1,21 @@
+-var data = [{title:"Connect",list:['MetaMask','Ethereum Network','Join the lottery']},{title:"Purchase",list:['DAI Stable','Purchase NFT scratch card','Tokens for all Participants']},{title:"Reveal or Sale",list:['Reveal the scratch card','Purchase NFT scratch card','Take your $GAIN tokens']}]
+mixin card()
+ div(class="card-how-it-work d-flex align-items-center justify-content-between")
+  each val,index in data 
+    div.card-how
+     h2(class="drkBlue size-20 nuntio-med text-center")= `step${index+1}`
+     .cardbkground
+      p(class="text-center white size-38 nunito-bold-ex cardbkground__title")= val.title 
+      ul(class="cardbkground__list")
+       each value in val.list 
+        li= value
+      h4 Airdrop Amount
+       p 
+        span 165000000
+        span GAIN
+       P 
+        span The Prize 
+        span $10000000
++card
+   
+ 
