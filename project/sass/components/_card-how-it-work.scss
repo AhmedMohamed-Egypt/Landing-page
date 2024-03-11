@@ -1,31 +1,95 @@
-$colors: ($secndryPink, $scondryYellow, $lightBlue);
+$val1:  url("../images/card-how.png"),
+linear-gradient(to right bottom, #1e1a24, #2a1c3a, #381c50, #481866, #5c0b7a);
+$val2: url("../images/card-how.png"),
+linear-gradient(to right bottom, #343123, #433e23, #524b22, #625920, #72671c);
+$val3: url("../images/card-how.png"),
+linear-gradient(to right bottom, #232839, #253149, #243b59, #1e4669, rgba(#0b517a,.5));;
 
-@for $i from 1 through length($colors){
+$colors: ($secndryPink, $scondryYellow, $lightBlue);
+$bkgrounds:(#220E31,#26211A,#12152E);
+$linearBkrounds:($val1,$val2,$val3);
+
+
+
+
     .card-how{
-        $color: nth($colors, $i);
+   
         border-radius: 7px;
-        width: 30%;
-        
+        width: 32%;
+      //  height: 600px;
+       // overflow: hidden;
+        .subcontainer{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .widget{
+      border-radius: 8px;
+        } 
+        .cardbkground{
+    
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-blend-mode: overlay;
+            height: 100%;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding-bottom: 40px;
+         
+
+          
+        }
+     
+        @for $i from 1 through length($colors){
+            $color: nth($colors, $i);
+            $bkground:nth($bkgrounds,$i);
+            $linears:nth($linearBkrounds,$i);
+         
         &:nth-child(#{$i}){
             border: 1px solid $color;
+            .widget{
+                background-color: rgba($bkground,.6);;
+                padding: 10px 20px;
+            }
             >h2{
                 background-color: $color;
                 border-top-left-radius: 7px;
                 border-top-right-radius: 7px;
 
             }
+        
             .cardbkground{
+                background-image:$linears;
+                
                 &__title{
                     text-shadow: 0px 1px 17px $thrdPink;
-                    margin-top: 15px;
-                    margin-bottom: 25px;
+                    padding-top: 15px;
+                    padding-bottom: 25px;
                 }
-                .sublist-how-it-work{
-                   &__list{
-                    
-                   }
-                }
+                &__list{
+                    background-color: rgba($bkground,.6);
+                    padding: 10px 0;
+                    border-radius: 7px;
+                    li{
+                        &:not(:last-child){
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .icon{
+                        width: 15px;
+                        height: 10px;
+                        display: block;
+                        background-repeat: no-repeat;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.021' height='10.324' viewBox='0 0 14.021 10.324'%3E%3Cg id='Check_icon' data-name='Check icon' transform='translate(-151.025 -177.225)'%3E%3Cg id='Group_23' data-name='Group 23' transform='translate(151.025 177.225)'%3E%3Cpath id='Path_5' data-name='Path 5' d='M155.828,187.549a1.111,1.111,0,0,1-.787-.326l-3.692-3.685a1.107,1.107,0,1,1,1.566-1.566l2.906,2.906,7.335-7.328a1.107,1.107,0,1,1,1.566,1.566l-8.114,8.107A1.112,1.112,0,0,1,155.828,187.549Z' transform='translate(-151.025 -177.225)' fill='%23795a9c'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    }
+                    }
+                  
             }
+         
         }
+        
+    
     }
-}
+
+    }
