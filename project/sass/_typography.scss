@@ -41,8 +41,30 @@
   font-family: 'Nunito-Black';
   src: url("../fonts/Nunito-Black.ttf");
 }
+@font-face {
+  font-family: 'Cairo-Bold.ttf';
+  src: url("../fonts/Cairo-Bold.ttf");
+}
+@font-face {
+  font-family: 'Cairo-Regular.ttf';
+  src: url("../fonts/Cairo-Regular.ttf");
+}
+@font-face {
+  font-family: 'LHF_Square_Block.otf';
+  src: url("../fonts/LHF_Square_Block.otf");
+}
+//LHF_Square_Block.otf
 //Nunito-Black.ttf
-//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf Nunito-MediumItalic.ttf Nunito-Regular.ttf
+//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf Nunito-MediumItalic.ttf Nunito-Regular.ttf Cairo-Regular.ttf
+.lhf-font{
+  font-family: 'LHF_Square_Block.otf';
+}
+.cairoReg{
+  font-family: 'Cairo-Regular.ttf';
+}
+.cairoBold{
+  font-family: 'Cairo-Bold.ttf';
+}
 .nunito-Black{
   font-family: 'Nunito-Black';
 }
@@ -50,7 +72,7 @@
   font-family: 'Nunito-Regular';
 }
 
-//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf Nunito-MediumItalic.ttf
+//Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf Nunito-MediumItalic.ttf Cairo-Bold.ttf
 
 .nuntio-med{
   font-family: 'Nunito-med';

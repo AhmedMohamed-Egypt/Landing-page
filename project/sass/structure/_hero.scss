@@ -10,7 +10,7 @@
     background-color: rgba($drkBlue,.6);
     &__logo{
         img{
-          //  width: 150px;
+          width: 50px;
         }
     }
     ul{
@@ -29,6 +29,7 @@
   &__headings{
     >p{
         width: 350px;
+        line-height: 1.2;
     }
   }
 }
