@@ -1,0 +1,16 @@
+.footer-adrop{
+    background-color: $black;
+    &__container{
+        &--socialLinks{
+            a{
+                &:not(:last-child){
+                    margin-right: 25px;
+                }
+                svg{
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+}

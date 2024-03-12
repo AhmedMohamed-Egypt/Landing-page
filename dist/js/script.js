@@ -123,3 +123,25 @@ formatNumbers()
 
 
 
+//get Current Year 
+const currentYear = document.querySelector(".currentYear")
+currentYear.textContent = new Date().getFullYear()
+//fixed header 
+let scroll = false;
+window.onscroll=()=>{
+  fixedHeader()
+  if(window.scrollY > 50){
+    scroll = true
+  }else {
+    scroll = false;
+  }
+}
+const fixedHeader=()=>{
+  
+  if(scroll){
+    document.body.classList.add('scrolling')
+  }else {
+    document.body.classList.remove('scrolling')
+  }
+  
+}

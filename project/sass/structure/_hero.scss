@@ -59,3 +59,26 @@
         }
     }
 }
+
+//scrolling 
+@keyframes scroller {
+    0%{
+    top: -50px;
+    }
+    100%{
+    top: 0;
+    }
+}
+.scrolling{
+    .header-adrop{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000;
+        z-index: 999999999;
+        animation-name: scroller;
+        animation-duration: .75s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+    }
+}
