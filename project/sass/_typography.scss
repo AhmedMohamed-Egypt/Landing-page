@@ -37,8 +37,15 @@
   font-family: 'Nunito-MediumItalic';
   src: url("../fonts/Nunito-MediumItalic.ttf");
 }
-
+@font-face {
+  font-family: 'Nunito-Black';
+  src: url("../fonts/Nunito-Black.ttf");
+}
+//Nunito-Black.ttf
 //Nunito-Bold.ttf Nunito-ExtraBold.ttf Nunito-SemiBold.ttf Nunito-MediumItalic.ttf Nunito-Regular.ttf
+.nunito-Black{
+  font-family: 'Nunito-Black';
+}
 .nunito-reg{
   font-family: 'Nunito-Regular';
 }
@@ -60,6 +67,7 @@
 .nuntio-med-italic{
   font-family: 'Nunito-MediumItalic';
 }
+
 .weight-normal{
   font-weight: normal;
 }
@@ -91,6 +99,9 @@
 }
 .capitilize{
   text-transform: capitalize;
+}
+.shrinkLheight{
+  line-height: 1;
 }
 /*h2 heading Title */
 
