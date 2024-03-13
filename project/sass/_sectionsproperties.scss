@@ -2,6 +2,9 @@
 .sections {
     background-color: $secondaryViolet;
     padding-top: 80px;
+    @include max(768px){
+        padding-top: 20px;
+    }
 
    // height: 800px;
 }
