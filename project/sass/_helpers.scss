@@ -33,6 +33,9 @@ a{
     position: relative;
     z-index: 999;
 }
+.flex-grow-one{
+    flex-grow: 1;
+}
 .d-flex{
     display: flex;
 }
