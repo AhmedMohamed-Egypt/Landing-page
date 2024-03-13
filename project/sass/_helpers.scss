@@ -81,6 +81,12 @@ display: block;
 .upperCaseFirstLtr{
    text-transform: capitalize;
 }
+.mrLeft-auto{
+margin-left: auto;
+}
+.mrt-0{
+    margin-right: 0 !important;
+}
 /*helpers for sections*/
 
 %customShrink{

@@ -14,31 +14,81 @@
   &__logo {
     @include max(768px) {
       order: -3;
-      }
+    }
     img {
       width: 50px;
     }
   }
   &__menumobile {
+    .social{
+        display: none;
+    }
     justify-content: center;
+    
+
     @include max(768px) {
       width: 100%;
       flex-direction: column;
+     // display: none;
+      overflow: hidden;
+      .social{
+        display: block;
+        order: 12;
+        .footer-adrop__container--socialLinks{
+            justify-content: space-around;
+            padding: 30px 0;
+        }
+      }
+
+   
     }
   }
   ul {
-    margin: auto;
+    margin: 0;
+     width:  100%;
+
     @include max(768px) {
       flex-direction: column;
       width: 100%;
       margin: 0;
+   
+     
+      max-height: 0;
+       overflow: hidden;
+    //   transition: 0.5s max-height ease-in;
+      
+     
+
+      > li {
+        &:not(:last-child) {
+          > a {
+          }
+        }
+        > a {
+          font-size: 20px;
+          display: block;
+          padding-bottom: 15px;
+          border-bottom: 1px solid $fourthViolet;
+          &.join-get-btn{
+            border-bottom: 0;
+            text-align: center;
+          }
+
+        }
+
+      }
     }
     > li {
-        @include max(768px) {
-           
-            width: 100%;
-            margin: 0 !important;
-          }
+      @include max(768px) {
+        width: 100%;
+        margin-right: 0 !important;
+        &:nth-child(4){
+            display: none;
+        }
+        &:nth-child(5){
+            order: 15;
+        }
+      }
       &:not(:last-child) {
         margin-right: 30px;
       }
@@ -46,8 +96,11 @@
   }
 }
 .content-herArea {
-   // height: calc(100% - 90px);
-  height: 50vh;
+  // height: calc(100% - 90px);
+  //height: 50vh;
+  @include cntrElmnt();
+  top: 35%;
+  left: 30%;
   &__headings {
     > p {
       width: 350px;
@@ -56,8 +109,8 @@
   }
 }
 .timer {
-    @include cntrElmnt();
-    top: 60%;
+  @include cntrElmnt();
+  top: 60%;
   ul {
     li {
       background-color: $drkBlue;

@@ -145,3 +145,17 @@ const fixedHeader=()=>{
   }
   
 }
+function hamburgMenu(){
+  const hamburgBtn = document.querySelector(".Hamburgmenu")
+  let show = false
+  hamburgBtn.addEventListener('click',()=>{
+     if(!show){
+      document.body.classList.add('menuOpen')
+      show = true
+     }else {
+      document.body.classList.remove('menuOpen')
+      show = false
+     }
+  })
+}
+hamburgMenu()

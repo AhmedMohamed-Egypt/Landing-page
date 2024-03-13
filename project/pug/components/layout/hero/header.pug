@@ -1,3 +1,8 @@
+mixin social()
+ p ahmed
+  
+-var list=["MR.Gain","Airdrop","Token","Social","join"]
+
 div(class="header-adrop d-flex align-items-center pdl-50 pdr-50 justify-content-between pdtop-9 pdb-9")
 
  a(href="#" class="header-adrop__logo white d-flex align-items-center")
@@ -10,10 +15,11 @@ div(class="header-adrop d-flex align-items-center pdl-50 pdr-50 justify-content-
  div(class="d-flex flex-grow-one header-adrop__menumobile")
   ul(class="d-flex align-items-center justify-content-center")
 
-   each val,index in ["MR.Gain","Airdrop","Token","Socials"]
-    li
-     a(href="#" class="nuntio-med white")= val 
-  a(href="#" class="join-get-btn size-22 nunito-bold join") join 
+   each val,index in list
+    li(class=`${index===0?'mrLeft-auto':''} ${index===list.length-1?'mrLeft-auto mrt-0':''}` )
+     a(href="#" class=`nuntio-med white ${index===list.length-1?'join-get-btn size-22 nunito-bold join':''}`)=val
+   li(class="social")  
+    include ../../general-components/socials.pug  
  .Hamburgmenu 
   span 
   span
