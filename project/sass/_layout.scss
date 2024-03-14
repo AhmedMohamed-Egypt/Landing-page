@@ -9,4 +9,12 @@
   &.shrink{
     max-width: 80%;
   }
+  @include max(1280px){
+   max-width: 92%;
+   padding-left: 10px;
+  padding-right: 10px;
+  }
+  @include max(400px){
+    max-width: 95%;
+  }
 }

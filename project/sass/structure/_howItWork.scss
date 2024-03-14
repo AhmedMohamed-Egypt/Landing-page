@@ -1,0 +1,11 @@
+.how-it-work {
+  &__mainTxt {
+    @include max(768px) {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    @include max(500px) {
+      font-size: 14px;
+    }
+  }
+}

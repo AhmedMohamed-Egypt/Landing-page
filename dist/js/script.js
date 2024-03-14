@@ -1,21 +1,24 @@
-const swiper = new Swiper(".getTickes  .swiper", {
+const swiper = new Swiper(".how-it-work  .swiper", {
   // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 5,
+
+  spaceBetween: 15,
   speed: 500,
 
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-    320: {
+   
+    // when window width is >= 640px
+   
+    992: {
+      spaceBetween: 15,
+      slidesPerView: 2,
+      
+    },
+    993: {
       slidesPerView: 2,
     },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-    },
-    // when window width is >= 640px
-    640: {
+    1100: {
       slidesPerView: 3,
     },
   },
@@ -110,52 +113,48 @@ if(event.ctrlKey===true){
 
 */
 
-function formatNumbers(){
-  const allNums = document.querySelectorAll('.formatNum')
+function formatNumbers() {
+  const allNums = document.querySelectorAll(".formatNum");
 
-  allNums.forEach((item)=>{
-    const x = +item.textContent
-    console.log(x)
+  allNums.forEach((item) => {
+    const x = +item.textContent;
+
     item.textContent = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  })
+  });
 }
-formatNumbers()
+formatNumbers();
 
-
-
-//get Current Year 
-const currentYear = document.querySelector(".currentYear")
-currentYear.textContent = new Date().getFullYear()
-//fixed header 
+//get Current Year
+const currentYear = document.querySelector(".currentYear");
+currentYear.textContent = new Date().getFullYear();
+//fixed header
 let scroll = false;
-window.onscroll=()=>{
-  fixedHeader()
-  if(window.scrollY > 50){
-    scroll = true
-  }else {
+window.onscroll = () => {
+  fixedHeader();
+  if (window.scrollY > 50) {
+    scroll = true;
+  } else {
     scroll = false;
   }
-}
-const fixedHeader=()=>{
-  
-  if(scroll){
-    document.body.classList.add('scrolling')
-  }else {
-    document.body.classList.remove('scrolling')
+};
+const fixedHeader = () => {
+  if (scroll) {
+    document.body.classList.add("scrolling");
+  } else {
+    document.body.classList.remove("scrolling");
   }
-  
+};
+function hamburgMenu() {
+  const hamburgBtn = document.querySelector(".Hamburgmenu");
+  let show = false;
+  hamburgBtn.addEventListener("click", () => {
+    if (!show) {
+      document.body.classList.add("menuOpen");
+      show = true;
+    } else {
+      document.body.classList.remove("menuOpen");
+      show = false;
+    }
+  });
 }
-function hamburgMenu(){
-  const hamburgBtn = document.querySelector(".Hamburgmenu")
-  let show = false
-  hamburgBtn.addEventListener('click',()=>{
-     if(!show){
-      document.body.classList.add('menuOpen')
-      show = true
-     }else {
-      document.body.classList.remove('menuOpen')
-      show = false
-     }
-  })
-}
-hamburgMenu()
+hamburgMenu();

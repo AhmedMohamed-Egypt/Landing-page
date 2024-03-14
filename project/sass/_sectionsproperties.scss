@@ -17,6 +17,15 @@
     border-bottom: 1px solid $light-violet;
     padding-bottom: 10px;
     margin-bottom: 50px;
+    @include max(992px){
+        font-size: 32px;
+    }
+    @include max(768px){
+        font-size: 30px;
+    }
+    @include max(600px){
+        font-size: 24px;
+    }
     
     span{
         display: inline-block;

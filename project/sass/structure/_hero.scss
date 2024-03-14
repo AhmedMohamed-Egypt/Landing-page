@@ -4,12 +4,25 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @include max(768px){
+    height: 600px;
+    .container-adrop{
+      position: relative;
+      height: 100%;
+      
+    }
+  }
 }
 .header-adrop {
   border-bottom: 1px solid $pink;
   background-color: rgba($drkBlue, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   @include max(768px) {
     flex-wrap: wrap;
+    padding: 9px 15px;
   }
   &__logo {
     @include max(768px) {
@@ -93,10 +106,11 @@
   @include cntrElmnt();
   top: 35%;
   left: 30%;
+  @include max(768px) {
+    display: none;
+  }
   &__headings {
-    @include max(768px) {
-      display: none;
-    }
+  
     > p {
       width: 350px;
       line-height: 1.2;
@@ -105,7 +119,11 @@
 }
 .timer {
   @include cntrElmnt();
-  top: 60%;
+  top:auto;
+  bottom: 10%;
+  @include max(768px){
+   
+  }
   ul {
     li {
       background-color: $drkBlue;
@@ -150,6 +168,7 @@
     animation-duration: 0.75s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards;
+  
   }
 }
 //show content
@@ -176,9 +195,17 @@
     .content-herArea {
       position: static;
       transform: none;
+      display: block;
+    }
+    h1{
+      font-size: 42px;
     }
   }
   .content-herArea__headings > p {
     text-align: center;
+    @include max(768px){
+      width: 80%;
+      font-size:20px ;
+    }
   }
 }

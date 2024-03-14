@@ -1,100 +1,131 @@
-$val1:  url("../images/card-how.png"),
-linear-gradient(to right bottom, #1e1a24, #2a1c3a, #381c50, #481866, #5c0b7a);
+$val1: url("../images/card-how.png"),
+  linear-gradient(to right bottom, #1e1a24, #2a1c3a, #381c50, #481866, #5c0b7a);
 $val2: url("../images/card-how.png"),
-linear-gradient(to right bottom, #343123, #433e23, #524b22, #625920, #72671c);
+  linear-gradient(to right bottom, #343123, #433e23, #524b22, #625920, #72671c);
 $val3: url("../images/card-how.png"),
-linear-gradient(to right bottom, #232839, #253149, #243b59, #1e4669, rgba(#0b517a,.5));;
+  linear-gradient(
+    to right bottom,
+    #232839,
+    #253149,
+    #243b59,
+    #1e4669,
+    rgba(#0b517a, 0.5)
+  );
 
 $colors: ($secndryPink, $scondryYellow, $lightBlue);
-$bkgrounds:(#220E31,#26211A,#12152E);
-$linearBkrounds:($val1,$val2,$val3);
+$bkgrounds: (#220e31, #26211a, #12152e);
+$linearBkrounds: ($val1, $val2, $val3);
 
+.card-how-it-work {
+  .swiper-wrapper{
 
-
-
-    .card-how{
-   
-        border-radius: 7px;
-        width: 32%;
+  }
+  .swiper-slide{
+    .card-how {
+      border-radius: 7px;
+  
       //  height: 600px;
-       // overflow: hidden;
-        .subcontainer{
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
+      // overflow: hidden;
+      @include min(993px) {
+        width: 100%;
+      }
+      @include max(992px) {
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .subcontainer {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .widget {
+        border-radius: 8px;
+      }
+      .cardbkground {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        background-blend-mode: overlay;
+        // height: 100%;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        padding-bottom: 40px;
+        .icon {
+          width: 15px;
+          height: 10px;
+          display: block;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.021' height='10.324' viewBox='0 0 14.021 10.324'%3E%3Cg id='Check_icon' data-name='Check icon' transform='translate(-151.025 -177.225)'%3E%3Cg id='Group_23' data-name='Group 23' transform='translate(151.025 177.225)'%3E%3Cpath id='Path_5' data-name='Path 5' d='M155.828,187.549a1.111,1.111,0,0,1-.787-.326l-3.692-3.685a1.107,1.107,0,1,1,1.566-1.566l2.906,2.906,7.335-7.328a1.107,1.107,0,1,1,1.566,1.566l-8.114,8.107A1.112,1.112,0,0,1,155.828,187.549Z' transform='translate(-151.025 -177.225)' fill='%23795a9c'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        .widget{
-      border-radius: 8px;
-        } 
-        .cardbkground{
-    
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            background-blend-mode: overlay;
-            height: 100%;
-            border-bottom-left-radius: 7px;
-            border-bottom-right-radius: 7px;
-            padding-bottom: 40px;
-            .icon{
-                width: 15px;
-                height: 10px;
-                display: block;
-                background-repeat: no-repeat;
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.021' height='10.324' viewBox='0 0 14.021 10.324'%3E%3Cg id='Check_icon' data-name='Check icon' transform='translate(-151.025 -177.225)'%3E%3Cg id='Group_23' data-name='Group 23' transform='translate(151.025 177.225)'%3E%3Cpath id='Path_5' data-name='Path 5' d='M155.828,187.549a1.111,1.111,0,0,1-.787-.326l-3.692-3.685a1.107,1.107,0,1,1,1.566-1.566l2.906,2.906,7.335-7.328a1.107,1.107,0,1,1,1.566,1.566l-8.114,8.107A1.112,1.112,0,0,1,155.828,187.549Z' transform='translate(-151.025 -177.225)' fill='%23795a9c'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            }
-         
-
-          
+  
+        &__title {
+          text-shadow: 0px 1px 17px $thrdPink;
+          padding-top: 15px;
+          padding-bottom: 25px;
+          @include max(1150px) {
+            font-size: 30px;
+          }
         }
-        >h2{
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
+  
+        &__list {
+          padding: 10px 0;
+          border-radius: 7px;
+          li {
+            @include max(1310px) {
+              font-size: 14px !important;
+            }
+            @include max(1050px) {
+              font-size: 12px !important;
+            }
+            @include max(992px) {
+              font-size: 17px !important;
+            }
+            @include max(600px) {
+              font-size: 15px !important;
+              line-height: 1.1;
+            }
+  
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+          }
         }
-     
-        @for $i from 1 through length($colors){
-            $color: nth($colors, $i);
-            $bkground:nth($bkgrounds,$i);
-            $linears:nth($linearBkrounds,$i);
-         
-        &:nth-child(#{$i}){
-            border: 1px solid $color;
-            .widget{
-                background-color: rgba($bkground,.6);;
-                padding: 10px 20px;
-            }
-            >h2{
-                background-color: $color;
-             
-                
-
-            }
-        
-            .cardbkground{
-                background-image:$linears;
-                
-                &__title{
-                    text-shadow: 0px 1px 17px $thrdPink;
-                    padding-top: 15px;
-                    padding-bottom: 25px;
-                }
-                &__list{
-                    background-color: rgba($bkground,.6);
-                    padding: 10px 0;
-                    border-radius: 7px;
-                    li{
-                        &:not(:last-child){
-                            margin-bottom: 10px;
-                        }
-                    }
-                   
-                    }
-                  
-            }
-         
-        }
-        
-    
+      }
+      > h2 {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+  
     }
+    
+    @for $i from 1 through length($colors) {
+      $color: nth($colors, $i);
+      $bkground: nth($bkgrounds, $i);
+      $linears: nth($linearBkrounds, $i);
 
+      &:nth-child(#{$i}) {
+        .card-how{
+          border: 1px solid $color;
+          .widget {
+            background-color: rgba($bkground, 0.6);
+            padding: 10px 20px;
+          }
+          > h2 {
+            background-color: $color;
+          }
+  
+          .cardbkground {
+            background-image: $linears;
+  
+            &__list {
+              background-color: rgba($bkground, 0.6);
+            }
+          }
+        }
+       
+      }
     }
+  }
+
+}

@@ -1,27 +1,34 @@
 -var data = [{title:"Connect",list:['MetaMask','Ethereum Network','Join the lottery']},{title:"Purchase",list:['DAI Stable','Purchase NFT scratch card','Tokens for all Participants']},{title:"Reveal or Sale",list:['Reveal the scratch card','Purchase NFT scratch card','Take your $GAIN tokens']}]
 mixin card()
- div(class="card-how-it-work d-flex align-items-center justify-content-between")
-  each val,index in data 
-    div.card-how
-     h2(class="drkBlue size-20 nuntio-med text-center capitilize pdtop-10 pdb-10")= `step${index+1}`
-     .cardbkground
-      p(class="text-center white size-38 nunito-bold-ex cardbkground__title")= val.title 
-      .subcontainer
-       ul(class="cardbkground__list mrb-35")
-        each value in val.list 
-         li(class="lightviolet nuntio-med size-18 d-flex align-items-center pdl-15")
-          span.icon
-          span(class="d-inline-block mrl-10")= value
+ //d-flex align-items-center justify-content-between
+ div(class="card-how-it-work ")
+  .swiper
+   .swiper-wrapper
+    each val,index in data 
+     .swiper-slide
+      div.card-how
+       h2(class="drkBlue size-20 nuntio-med text-center capitilize pdtop-10 pdb-10")= `step${index+1}`
+       .cardbkground
+        p(class="text-center white size-38 nunito-bold-ex cardbkground__title")= val.title 
+        .subcontainer
+         ul(class="cardbkground__list mrb-35")
+          each value in val.list 
+           li(class="lightviolet nuntio-med size-18 d-flex align-items-center pdl-15")
+            span.icon
+            span(class="d-inline-block mrl-10")= value
           
-       h4(class="fothrViolet weight-normal size-18 nuntio-med mrb-15") Airdrop Amount
-       p(class="widget")
-         span(class="nuntio-med size-18 fothrViolet") 165000000
-         span(class="yellow size-18 nuntio-med text-uppercase mrl-10") GAIN
-       h4(class="fothrViolet weight-normal size-18 nuntio-med mtop-20 mrb-10") The prize 
-       P(class="widget")
-        span(class="yellow size-18 nuntio-med ") 
-         span(class="d-inline-block mrt-5") $
-         span(class="formatNum") 1000000
+         h4(class="fothrViolet weight-normal size-18 nuntio-med mrb-15") Airdrop Amount
+         p(class="widget")
+           span(class="nuntio-med size-18 fothrViolet") 165000000
+           span(class="yellow size-18 nuntio-med text-uppercase mrl-10") GAIN
+         h4(class="fothrViolet weight-normal size-18 nuntio-med mtop-20 mrb-10") The prize 
+         P(class="widget")
+          span(class="yellow size-18 nuntio-med ") 
+           span(class="d-inline-block mrt-5") $
+           span(class="formatNum") 1000000
+  .pagination
+   .swiper-button-prev
+   .swiper-button-next
           
          
 +card
