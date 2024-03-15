@@ -29,7 +29,10 @@
                 svg{
                     width: 20px;
                     path{
-                fill: $lowLighViolet;
+                        @include max(768px){
+                            fill: $lowLighViolet;
+                        }
+                
 
                     }
                 }
