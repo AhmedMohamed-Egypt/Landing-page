@@ -2,7 +2,7 @@
     background-color: $black;
     
     &__container{
-        @include max(768px){
+        @include max(850px){
             flex-direction: column;
             >*{
                 margin-bottom: 10px;

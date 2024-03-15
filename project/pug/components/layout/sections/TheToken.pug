@@ -18,7 +18,7 @@ mixin ListTraffic(classlist)
    div(class=`d-flex align-items-start theToken__traffic--content  ${index!==ListTraffic.length-1?'mrb-35':''}`)
     
      span(class="nunito-Black thirdYellow size-42 d-block mrt-20 number")= `${index+1}`
-     p(class="d-flex flex-column ")
+     p(class="d-flex flex-column theToken__traffic--content--txt")
       span(class="thrdViolet nuntio-med size-22")= val.txt1
       span(class="thrdViolet nuntio-med size-22")= val.txt2
       span(class="thrdViolet nuntio-med size-22")= val.txt3
@@ -34,7 +34,7 @@ div(class="theToken pdtop-60 ")
   div(class="flex-grow-one")
    
    +List("theToken__list mtop-50")
-   h3(class="nunito-bold size-36 white mtop-35 mrb-25") Monetize Your Traffic:
+   h3(class="nunito-bold size-36 white mtop-35 mrb-25 headingH3") Monetize Your Traffic:
    +ListTraffic("theToken__traffic d-flex")
   .theToken__bkground
    

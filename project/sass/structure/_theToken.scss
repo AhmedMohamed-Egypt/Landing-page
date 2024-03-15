@@ -74,6 +74,12 @@
         flex-wrap: wrap;
         position: relative;
         max-width: 750px;
+        @include max(992px){
+            max-width: 500px;
+        }
+        @include max(720px){
+            max-width: 400px;
+        }
         &--content{
            width: 32%;
            @include max(1200px){
@@ -86,6 +92,19 @@
            .number{
             position: relative;
             top: -6px;
+            @include max(768px){
+                font-size:32px;
+            }
+           }
+           &--txt{
+             span{
+                @include max(992px){
+                    font-size: 20px;
+                }
+                @include max(768px){
+                    font-size:18px;
+                }
+             }
            }
         }
     }
@@ -110,6 +129,12 @@
         @include max(1100px){
             width: 325px;
             top: 0;
+            transform: scale(.9);
+        }
+        @include max(769px){
+            transform: scale(.7);
+            height: 450px;
+            right: -15%;
         }
         
         
