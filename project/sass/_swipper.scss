@@ -86,4 +86,21 @@
      }
     }
   }
+  .swiper-pagination {
+    @include max(500px){
+      top: auto;
+      bottom: 30px;
+    }
+    .swiper-pagination-bullet{
+      width: 13px;
+      height: 13px;
+      &:not(.swiper-pagination-bullet-active){
+        background-color: transparent;
+        border: 1px solid #AB8BD1;
+      }
+      &.swiper-pagination-bullet-active{
+        background-color: #57258F;
+      }
+    }
+  }
 }

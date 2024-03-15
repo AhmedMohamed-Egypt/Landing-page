@@ -35,11 +35,14 @@
   width: 100%;
   top: 0;
   left: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   @include max(768px) {
     flex-wrap: wrap;
     padding: 9px 15px;
   }
   &__logo {
+    position: absolute;
     @include max(768px) {
       order: -3;
     }
@@ -136,7 +139,7 @@
   @include cntrElmnt();
   top:auto;
   bottom: 10%;
-  z-index: 999999999999;
+  z-index: 99;
   @include max(768px){
    
   }

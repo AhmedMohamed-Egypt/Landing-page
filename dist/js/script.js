@@ -35,6 +35,10 @@ const swiperToken = new Swiper(".theToken__list .swiper", {
   speed: 500,
   spaceBetween: 5,
   speed: 500,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
   // Responsive breakpoints
   breakpoints:{

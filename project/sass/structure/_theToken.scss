@@ -41,6 +41,11 @@
         max-width: 537px;
         @include max(992px){
             font-size: 18px;
+            max-width: 80%;
+        }
+        @include max(500px){
+          margin-bottom: 10px;
+          max-width: 90%;
         }
         .span{
             position: relative;
