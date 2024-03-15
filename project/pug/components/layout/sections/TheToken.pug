@@ -1,17 +1,20 @@
 -var list = ["Reward your followers and fans with exclusive content, cash prizes, NFTs, and more.","Monetize your traffic and generate revenue from your audience.","Build a community around your brand or interest."]
 mixin List(classProperty)
- ul(class=classProperty)
-  each val , index in list
-   li(class=`thrdViolet nuntio-med size-21 d-flex align-items-center  shrinkLineHeight ${index!==list.length-1?'mrb-25':''}`)
-    span(class="icon mrt-20")
-     include ../../general-components/yellowIcon.pug
-    span= val
+ div(class=`${classProperty} `)
+  .swiper
+   .swiper-wrapper
+     each val , index in list
+      .swiper-slide
+       p(class=`thrdViolet nuntio-med size-21 d-flex align-items-center theToken__list--mainTxt  shrinkLineHeight ${index!==list.length-1?'mrb-25':''}`)
+         span(class="icon mrt-20")
+          include ../../general-components/yellowIcon.pug
+         span= val
 -var ListTraffic = [ {txt1:"Purchase",txt2:"Gain Tokens"},{txt1:"Create",txt2:"a lottery"},{txt1:"Set the prizes,",txt2:"rules, and ticket",txt3:"price"},{txt1:"Promote your ",txt2:"lottery to your ",txt3:"audience"},{txt1:"Invite",txt2:"sponsors to",txt3:"your lottery"},{txt1:"Distribute prizes ",txt2:"to the winners",txt3:""}]
 
 mixin ListTraffic(classlist)
- ul(class=classlist)
+ div(class=classlist)
   each val ,index in ListTraffic 
-   li(class=`d-flex align-items-start ${index!==ListTraffic.length-1?'mrb-35':''}`)
+   div(class=`d-flex align-items-start theToken__traffic--content  ${index!==ListTraffic.length-1?'mrb-35':''}`)
     
      span(class="nunito-Black thirdYellow size-42 d-block mrt-20 number")= `${index+1}`
      p(class="d-flex flex-column ")
@@ -22,16 +25,17 @@ div(class="theToken pdtop-60 ")
  h2(class="heading-sections") 
    span The Token
  p(class="nunito-bold size-36 white shrinkLheight theToken__text")
-    span The Gain Token is a utility token that
-    span allows you to create and manage your
-    span own custom lotteries. With the Gain
-    span Token, you can:  
- div(class="d-flex align-items-center postion-relative")
-  div
+     |The Gain Token is a utility token that
+     |allows you to create and manage your
+     |own custom lotteries. With the Gain
+     |Token, you can:  
+ div(class=" postion-relative")
+  div(class="flex-grow-one")
    
    +List("theToken__list mtop-50")
    h3(class="nunito-bold size-36 white mtop-35 mrb-25") Monetize Your Traffic:
    +ListTraffic("theToken__traffic d-flex")
   .theToken__bkground
+   
  
 

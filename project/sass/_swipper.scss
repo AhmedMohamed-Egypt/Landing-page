@@ -68,3 +68,22 @@
     }
   }
 }
+/*swiper token list */
+
+.theToken__list{
+  .swiper-wrapper{
+    
+   
+    @include min(770px){
+      display: flex;
+    flex-direction: column;
+     }
+    
+    .swiper-slide{
+    
+     @include min(770px){
+      width: 100% !important;
+     }
+    }
+  }
+}

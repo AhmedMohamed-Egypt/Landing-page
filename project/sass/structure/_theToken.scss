@@ -1,13 +1,47 @@
 .theToken{
     &__text{
-        
+        max-width: 660px;
+        @include max(1300px){
+            font-size: 24px;
+        }
+        @include max(993px){
+            font-size: 22px;
+            max-width: 75%;
+            text-align: center;
+            padding-bottom: 25px;
+            margin: auto;
+            line-height: 1.25;
+        }
+        @include max(768px){
+            font-size: 20px;
+            max-width: 85%;
+          
+         
+        }
+         @include max(600px){
+            font-size: 18px;
+            max-width: 90%;
+          
+         
+        }
+           @include max(450px){
+            font-size: 17px;
+            max-width: 95%;
+            letter-spacing: .5px;
+          
+         
+        }
         span{
             display: block;
         }
     }
     &__list{
-      li{
+
+      &--mainTxt{
         max-width: 537px;
+        @include max(992px){
+            font-size: 18px;
+        }
         .span{
             position: relative;
             top: -6px;
@@ -20,6 +54,10 @@
             border-radius: 50%;
             border: 2px solid $scondryYellow;
             position: relative;
+            @include max(992px){
+                min-width: 30px;
+                height: 30px;
+            }
             svg{
                 @include cntrElmnt();
                 width: 16px;
@@ -31,8 +69,11 @@
         flex-wrap: wrap;
         position: relative;
         max-width: 750px;
-        >li{
+        &--content{
            width: 32%;
+           @include max(1200px){
+            width: 48%;
+           }
            >p{
            line-height: 1.15;
 
@@ -44,15 +85,29 @@
         }
     }
     &__bkground{
+    
+        @include max(992px){
+          //  top: -120px;
+        }
+        img{
+          //  width: 95%;
+        }
+        
         background-image: url("../images/token.png");
         height: 620px;
         background-size: contain;
         background-repeat: no-repeat;
-        width: 566px;
+        width: 400px;
         position: absolute;
         top: -180px;
         right: -35px;
         background-position: center;
+        @include max(1100px){
+            width: 325px;
+            top: 0;
+        }
+        
+        
     }
     
 }

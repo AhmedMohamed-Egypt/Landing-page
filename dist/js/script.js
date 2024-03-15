@@ -28,20 +28,26 @@ const swiper = new Swiper(".how-it-work  .swiper", {
   },
 });
 
-const swiperEducation = new Swiper(".education-sliding  .swiper", {
+const swiperToken = new Swiper(".theToken__list .swiper", {
   // Default parameters
-  slidesPerView: 1,
+  //slidesPerView: 3,
   // spaceBetween: 5,
+  speed: 500,
+  spaceBetween: 5,
   speed: 500,
 
   // Responsive breakpoints
-
-  /*
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  breakpoints:{
+    375: {
+      slidesPerView: 1,
+    },
+    770: {
+      slidesPerView: 3,
+    },
   },
-  */
+ 
+
+
 });
 //format Number
 

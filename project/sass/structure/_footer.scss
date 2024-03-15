@@ -1,6 +1,26 @@
 .footer-adrop{
     background-color: $black;
+    
     &__container{
+        @include max(768px){
+            flex-direction: column;
+            >*{
+                margin-bottom: 10px;
+            }
+            p,span,a{
+                color: $lowLighViolet;
+            }
+        &--privacyLinks{
+            display: flex;
+            flex-direction: column;
+            >a{
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+            
+        }
         &--socialLinks{
             a{
                 &:not(:last-child){
@@ -8,6 +28,10 @@
                 }
                 svg{
                     width: 20px;
+                    path{
+                fill: $lowLighViolet;
+
+                    }
                 }
             }
         }
