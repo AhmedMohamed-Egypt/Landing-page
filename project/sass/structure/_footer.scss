@@ -4,9 +4,10 @@
     &__container{
         @include max(850px){
             flex-direction: column;
-            >*{
+            >*:not(:last-child){
                 margin-bottom: 10px;
             }
+            
             p,span,a{
                 color: $lowLighViolet;
             }
