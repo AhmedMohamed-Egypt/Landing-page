@@ -13,11 +13,15 @@
     width: 100%;
     height: 30%;
   
+ 
+  
    
-    background-image: linear-gradient(0deg, rgba(#17052c,.25) 0%, rgba(4, 7, 32, 0.0001) 100%);
+    background-image: linear-gradient(0deg, rgba(#17052c,.65) 0%, rgba(4, 7, 32, 0.0001) 100%);
     height: 30%;
     top: auto;
     bottom: 0;
+    z-index: 99999;
+    
   }
   @include max(768px){
     height: 600px;
