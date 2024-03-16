@@ -36,7 +36,9 @@
         }
     }
     &__list{
-
+      @include max(500px){
+        margin-top: 15px;
+      }
       &--mainTxt{
         max-width: 537px;
         @include max(992px){
@@ -140,6 +142,22 @@
             height: 450px;
             right: -15%;
         }
+        @include max(651px){
+            transform: scale(.5);
+            top: -80px;
+        }
+        @include max(500px){
+           right: -25%;
+        }
+        @include max(450px){
+            transform: scale(.35);
+            right: -34%;
+            top: -104px;
+         }
+         @include max(400px){
+            transform: scale(.3);
+          
+         }
         
         
     }

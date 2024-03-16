@@ -111,6 +111,11 @@
   .swiper-wrapper{
     
     margin: 0;
+    @include min(651px){
+    
+      display: flex;
+  flex-wrap: wrap;
+     }
     .swiper-slide{
       @include min(1201px){
         width: 32% !important;
