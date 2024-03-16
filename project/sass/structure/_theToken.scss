@@ -101,6 +101,9 @@
             @include max(768px){
                 font-size:32px;
             }
+            @include max(500px){
+               margin-right: 5px;
+            }
            }
            &--txt{
              span{
@@ -151,7 +154,7 @@
         }
         @include max(450px){
             transform: scale(.35);
-            right: -34%;
+            right: -36%;
             top: -104px;
          }
          @include max(400px){
