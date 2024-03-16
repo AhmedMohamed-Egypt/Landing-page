@@ -23,8 +23,8 @@ const swiper = new Swiper(".how-it-work  .swiper", {
     },
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".how-it-work .swiper-button-next",
+    prevEl: ".how-it-work .swiper-button-prev",
   },
 });
 
@@ -36,7 +36,7 @@ const swiperToken = new Swiper(".theToken__list .swiper", {
   spaceBetween: 5,
   speed: 500,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.theToken__list .swiper-pagination',
     clickable: true,
   },
 
@@ -47,6 +47,34 @@ const swiperToken = new Swiper(".theToken__list .swiper", {
     },
     770: {
       slidesPerView: 3,
+    },
+  },
+ 
+
+
+});
+
+
+
+const swiperTraffic = new Swiper(".theToken__traffic.swiper", {
+  // Default parameters
+  //slidesPerView: 3,
+  // spaceBetween: 5,
+  speed: 500,
+  spaceBetween: 5,
+  speed: 500,
+  navigation: {
+    nextEl: ".theToken__traffic.swiper .swiper-button-next",
+    prevEl: ".theToken__traffic.swiper .swiper-button-prev",
+  },
+
+  // Responsive breakpoints
+  breakpoints:{
+    375: {
+      slidesPerView: 1,
+    },
+    650: {
+      slidesPerView: 6,
     },
   },
  
