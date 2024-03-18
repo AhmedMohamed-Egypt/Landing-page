@@ -196,3 +196,51 @@ function hamburgMenu() {
   });
 }
 hamburgMenu();
+/*Timer */
+var numberOfDays = 15;
+var today = new Date();
+var start = getNextStartDate(today);
+var end = getNextEndDate(today);
+var endMiddle = getMidEndDate(today);
+console.log(end)
+console.log(endMiddle)
+
+var timer = setInterval(function() {
+  var differenceTime, dd, hh, mm, ss, str;
+  var now = new Date();
+  if (now >= endMiddle) {
+    start = getNextStartDate(now);
+    end = getNextEndDate(now);
+   
+  } else {
+    differenceTime = end - now;
+
+    dd = parseInt(differenceTime / (1000 * 60 * 60 * 24));
+    hh = parseInt(differenceTime / (60 * 60 * 1000)) % 24;
+    mm = parseInt(differenceTime / (1000 * 60)) % 60;
+    ss = parseInt(differenceTime / 1000) % 60;
+
+    document.querySelector('.days').innerHTML = format(dd);
+    document.querySelector('.hours').innerHTML = format(hh);
+    document.querySelector('.minutes').innerHTML = format(mm);
+   // document.querySelector('.seconds').innerHTML = format(ss);
+  }
+}, 1000);
+
+function getNextEndDate(fromDate) {
+  return new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate() + numberOfDays);
+}
+function getMidEndDate(fromDate) {
+    return new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate() + 1);
+  }
+
+function getNextStartDate(currentDate) {
+  var currentDay = currentDate.getDate();
+  var index = Math.ceil(currentDay / 3);
+  var nextStartDay = 1 + numberOfDays * index
+  return new Date(currentDate.getFullYear(), currentDate.getMonth(), nextStartDay);
+}
+
+function format(num) {
+  return (9 < num) ? num : "0" + num;
+};

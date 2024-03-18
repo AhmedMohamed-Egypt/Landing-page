@@ -1,10 +1,10 @@
-- var data = [{time:"Days",num:15},{time:"Hours",num:11},{time:"Minutes",num:25}]
+- var data = [{time:"Days",num:'',class:"days"},{time:"Hours",num:'',class:"hours"},{time:"Minutes",num:'',class:"minutes"}]
 div(class="timer d-flex justify-content-center")
  ul(class="d-flex align-items-center")
   each val,index in data
    li(class=" text-center")
     p(class="nunito-bold size-20 white pdtop-5 pdb-5")= val.time 
-    p(class="nunito-bold-ex white size-40 pdtop-20 pdb-20")= val.num
+    p(class=`nunito-bold-ex white size-40 pdtop-20 pdb-20 ${val.class}`)= val.num
    
  
  
