@@ -6,6 +6,16 @@
   background-position: center -145px;
   position: relative;
   background-color: #17052c;
+  @include max(992px){
+    background-position: center;
+    background-color: transparent;
+  }
+  @include max(435px){
+    background-image: url("../images/mobile-hero.png");
+    background-position: center;
+    height: 260px !important;
+    background-size: cover;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -41,6 +51,10 @@
   top: 0;
   left: 0;
   z-index: 99999999999;
+  @include max(435px){
+    background: none;
+    border: none;
+  }
   /*
   padding-top: 30px;
   padding-bottom: 30px;
@@ -51,6 +65,16 @@
     padding: 9px 15px;
   }
   &__logo {
+    p{
+      span{
+        @include max(435px){
+          font-size: 24px;
+          &:nth-child(2){
+            font-size: 10px;
+          }
+        }
+      }
+    }
     @include min(769px) {
       // position: absolute;
     }
@@ -59,6 +83,9 @@
     }
     img {
       width: 50px;
+      @include max(435px){
+        width: 35px;
+      }
     }
   }
   &__menumobile {
@@ -149,14 +176,38 @@
   @include cntrElmnt();
   top: auto;
   bottom: 10%;
-  z-index: 9999999;
-  @include max(768px) {
+  z-index: 99;
+
+  @include max(430px) {
+    bottom: -20px;
   }
   ul {
     li {
       background-color: $drkBlue;
       border-radius: 7px;
       width: 105px;
+      @include max(435px){
+        width: 55px;
+      }
+      p{
+      
+          @include max(435px){
+           &:nth-child(1){
+            font-size: 13px;
+           }
+           &:nth-child(2){
+            font-size: 22px;
+            padding: 0;
+            height: 50px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
+          }
+        
+        
+       
+      }
 
       &:nth-child(2) {
         margin: 0 15px;
