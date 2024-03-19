@@ -231,7 +231,7 @@ function getNextEndDate(fromDate) {
   return new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate() + numberOfDays);
 }
 function getMidEndDate(fromDate) {
-    return new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate() + 1);
+    return new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate() + 4);
   }
 
 function getNextStartDate(currentDate) {
