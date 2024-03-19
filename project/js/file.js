@@ -191,6 +191,8 @@ function hamburgMenu() {
       show = true;
     } else {
       document.body.classList.remove("menuOpen");
+     
+
       show = false;
     }
   });
@@ -198,7 +200,7 @@ function hamburgMenu() {
 hamburgMenu();
 /*Timer */
 var numberOfDays = 15;
-var today = new Date();
+var today = new Date('Tue Mar 19 2024 11:58:33 GMT+0200 ');
 var start = getNextStartDate(today);
 var end = getNextEndDate(today);
 var endMiddle = getMidEndDate(today);

@@ -153,12 +153,12 @@
            right: -25%;
         }
         @include max(450px){
-            transform: scale(.35);
-            right: -36%;
+           // transform: scale(.35);
+            right: -27%;
             top: -104px;
          }
          @include max(400px){
-            transform: scale(.3);
+          //  transform: scale(.3);
           
          }
         
