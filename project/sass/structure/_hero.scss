@@ -160,8 +160,8 @@
   // height: calc(100% - 90px);
   //height: 50vh;
   @include cntrElmnt();
-  top: 35%;
-  left: 30%;
+  top: 30%;
+  left: 23%;
   @include max(768px) {
     display: none;
   }
@@ -186,6 +186,9 @@
       background-color: $drkBlue;
       border-radius: 7px;
       width: 105px;
+      &:last-child{
+        display: none;
+      }
       @include max(435px){
         width: 55px;
       }
@@ -213,6 +216,9 @@
         margin: 0 15px;
       }
       > p {
+        .word{
+          display: none;
+        }
         &:nth-child(1) {
           //  padding: 18px 20px;
         }

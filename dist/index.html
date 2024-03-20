@@ -43,18 +43,22 @@
           </div>
         </div>
         <div class="timer d-flex justify-content-center">
-          <ul class="d-flex align-items-center">
+          <ul class="d-flex align-items-center countdown" data-date="2-4-2024" data-time="12:00">
             <li class=" text-center">
               <p class="nunito-bold size-20 white pdtop-5 pdb-5">Days</p>
-              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 days"></p>
+              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 day"><span class="num"></span><span class="word"></span></p>
             </li>
             <li class=" text-center">
               <p class="nunito-bold size-20 white pdtop-5 pdb-5">Hours</p>
-              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 hours"></p>
+              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 hour"><span class="num"></span><span class="word"></span></p>
             </li>
             <li class=" text-center">
               <p class="nunito-bold size-20 white pdtop-5 pdb-5">Minutes</p>
-              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 minutes"></p>
+              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 min"><span class="num"></span><span class="word"></span></p>
+            </li>
+            <li class=" text-center">
+              <p class="nunito-bold size-20 white pdtop-5 pdb-5">Days</p>
+              <p class="nunito-bold-ex white size-40 pdtop-20 pdb-20 sec"><span class="num"></span><span class="word"></span></p>
             </li>
           </ul>
         </div>
@@ -253,4 +257,5 @@
   </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/countdown.js"></script>
 <script src="js/script.js"></script>
